@@ -21,10 +21,6 @@
 		<property name="url" value="${jdbc.url}"></property>
 		<property name="username" value="${jdbc.username}"></property>
 		<property name="password" value="${jdbc.password}"></property>
-		<!-- property name="maxTotal" value="${jdbc.maxTotal}"></property>
-		<property name="maxIdle" value="${jdbc.maxIdle}"></property>
-		<property name="initialSize" value="${jdbc.initialSize}"></property> -->
-		
 	</bean>
 	
     <!--配置session工厂-->
@@ -48,17 +44,6 @@
 
 	<!-- 开启事务注解 -->
 	<tx:annotation-driven transaction-manager="transactionManager"/>
-	
-	<tx:advice id="txAdvice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<tx:method name="*" propagation="REQUIRED" isolation="DEFAULT" read-only="false"/>
-		</tx:attributes>
-	</tx:advice>
-	
-	<aop:config>
-		<aop:pointcut expression="execution(* cn.edu.zucc.booklib.service.*ServiceImpl.*(..))" id="txPointCut"/>
-		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>
-	</aop:config>
 	
 	<!-- 扫描 -->
 	<context:component-scan base-package="cn.edu.zucc.booklib.dao, cn.edu.zucc.booklib.service" />		
