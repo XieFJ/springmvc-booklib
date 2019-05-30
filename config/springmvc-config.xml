@@ -11,12 +11,12 @@
            http://www.springframework.org/schema/mvc
            http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 	<!-- 配置包扫描器，扫描@Controller注解的类 -->
-	<context:component-scan base-package="controller" />		
+	<context:component-scan base-package="cn.edu.zucc.booklib.controller" />		
 	<!-- 加载注解驱动 -->
 	<mvc:annotation-driven />
 	<!-- 配置视图解析器 -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
+    <!-- bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/html/"/>
+        <property name="suffix" value=".html"/>
+    </bean> -->
 </beans>
