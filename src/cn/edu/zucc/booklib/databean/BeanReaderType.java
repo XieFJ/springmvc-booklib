@@ -1,19 +1,12 @@
 package	cn.edu.zucc.booklib.databean;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
+import javax.persistence.Table;
 @Entity
 @Table(name = "reader_type")
 public class BeanReaderType {
@@ -30,16 +23,6 @@ public class BeanReaderType {
 	@Column(name = "is_delete")
 	private int isDelete;
 	
-	@OneToMany(mappedBy="readerType",cascade={CascadeType.ALL})
-    @LazyCollection(LazyCollectionOption.FALSE) //设置立即加载,默认为延迟加载
-    private Set<BeanReader> readers = new HashSet<BeanReader>();// 图书集合
-	
-	public Set<BeanReader> getReaders() {
-		return readers;
-	}
-	public void setReaders(Set<BeanReader> readers) {
-		this.readers = readers;
-	}
 	public int getReadertypeId() {
 		return readertypeId;
 	}
