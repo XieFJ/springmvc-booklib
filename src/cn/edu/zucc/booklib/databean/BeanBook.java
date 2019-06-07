@@ -24,6 +24,10 @@ public class BeanBook {
 	private String publisher;
 	@Column(name = "stock_number")
 	private int stockNumber;
+	@Column(name = "introduction")
+	private String introduction;
+	@Column(name = "picture")
+	private String picture;
 	@Column(name = "is_delete")
 	private int isDelete;
 	
@@ -72,5 +76,17 @@ public class BeanBook {
 	}
 	public void setIsDelete(int isDelete) {
 		this.isDelete = isDelete;
+	}
+	public String getIntroduction() {
+		return introduction;
+	}
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
+	}
+	public String getPicture() {
+		return picture;
+	}
+	public void setPicture(String picture) {
+		this.picture = picture;
 	}
 }

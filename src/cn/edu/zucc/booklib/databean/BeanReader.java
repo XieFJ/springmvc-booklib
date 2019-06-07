@@ -19,7 +19,7 @@ public class BeanReader {
 	@Column(name = "reader_id", unique = true, nullable = false)
 	private int readerId;
 	@Column(name = "reader_name")
-	private String reader_Name;
+	private String readerName;
 	@Column(name = "password")
 	private String password;
 	@Column(name = "lend_number")
@@ -45,11 +45,11 @@ public class BeanReader {
 	public void setReaderId(int readerId) {
 		this.readerId = readerId;
 	}
-	public String getReader_Name() {
-		return reader_Name;
+	public String getReaderName() {
+		return readerName;
 	}
-	public void setReader_Name(String reader_Name) {
-		this.reader_Name = reader_Name;
+	public void setReaderName(String readerName) {
+		this.readerName = readerName;
 	}
 	public String getPassword() {
 		return password;

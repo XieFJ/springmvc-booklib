@@ -16,25 +16,32 @@ public class BeanBookType {
 	private int booktypeId;
 	@Column(name = "booktype_name")
 	private String booktypeName;
+	private String picture;
 	@Column(name = "is_delete")
 	private int isDelete;
 
-	public void setBooktype_id(int booktypeId){
+	public void setBooktypeId(int booktypeId){
 		this.booktypeId = booktypeId;
 	}
-	public int getBooktype_id(){
+	public int getBooktypeId(){
 		return booktypeId;
 	}
-	public void setBooktype_name(String booktypeName){
+	public void setBooktypeName(String booktypeName){
 		this.booktypeName = booktypeName;
 	}
-	public String getBooktype_name(){
+	public String getBooktypeName(){
 		return booktypeName;
 	}
-	public void setIs_delete(int isDelete){
+	public String getPicture() {
+		return picture;
+	}
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+	public void setIsDelete(int isDelete){
 		this.isDelete = isDelete;
 	}
-	public int getIs_delete(){
+	public int getIsDelete(){
 		return isDelete;
 	}
 }
