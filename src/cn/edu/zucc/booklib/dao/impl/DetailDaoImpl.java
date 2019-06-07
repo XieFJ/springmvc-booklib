@@ -49,6 +49,7 @@ public class DetailDaoImpl implements DetailDAO {
 		detail.setReader(reader);
 		detail.setBook(book);
 		detail.setRecord(record);
+		detail.setRenewStatus(0);
 		
 		session.save(detail);
 	}
@@ -108,6 +109,7 @@ public class DetailDaoImpl implements DetailDAO {
 		calendar.add(calendar.DATE,+dueTime);
 		Date newDueDate = calendar.getTime();
 		detail.setDueDate(newDueDate);
+		detail.setRenewStatus(1);
 		
 		session.update(detail);
 

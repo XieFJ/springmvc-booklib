@@ -91,7 +91,7 @@ public class DetailServiceImpl implements DetailService {
 	public void renewDueDate(int detailId) throws BooklibException {
 		BeanDetail detail = this.detailDao.findById(detailId);
 		if(detail==null)throw new BooklibException("记录不存在");
-		
+		if(detail.getRenewStatus()==1)throw new BooklibException("续借次数已达上限");
 		this.detailDao.renewDueDate(detail);
 	}
 

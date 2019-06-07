@@ -33,7 +33,7 @@ public class MainFilter implements Filter {
 			
 			try {
 				UserService us = (UserService)ctx.getBean("userServiceImpl");
-				String username = us.checkuser(userid, pwd);
+				String username = us.checkuser(userid, pwd);              
 				req.getSession().setAttribute("username", username);
 				HttpServletResponse resp = (HttpServletResponse)response;
 				resp.sendRedirect(req.getContextPath()+"/enter");

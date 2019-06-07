@@ -15,6 +15,9 @@ public interface BookService {
 	
 	public void modifyBook(int bookId, String bookName, String author, String publisher, int stockNumber, String booktypeName)throws BooklibException ;
 	
+	public BeanBook findBookById(int bookId) throws BooklibException;
+	
 	public List<BeanBook> findBooks(String bookName, String author, String booktypeName)throws BooklibException ;
+
 	
 }

@@ -26,6 +26,8 @@ public class BeanDetail {
 	private Date returnDate;
 	@Column(name = "penalty")
 	private double penalty;
+	@Column(name = "renew_status")
+	private int renewStatus;
 	
 	@ManyToOne(fetch=FetchType.LAZY) //fetch: 设置了延迟加载 ，默认为立即加载，不设置则会和reader表外连接查询
     @JoinColumn(name="reader_id")
@@ -86,6 +88,12 @@ public class BeanDetail {
 	}
 	public void setPenalty(double penalty) {
 		this.penalty = penalty;
+	}
+	public int getRenewStatus() {
+		return renewStatus;
+	}
+	public void setRenewStatus(int renewStatus) {
+		this.renewStatus = renewStatus;
 	}
 	
 }
