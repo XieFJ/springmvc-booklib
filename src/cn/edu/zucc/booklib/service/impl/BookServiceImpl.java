@@ -63,8 +63,6 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-<<<<<<< HEAD
-=======
 	public BeanBook findBookById(int bookId) throws BooklibException {
 		BeanBook book = this.bookDao.findBookById(bookId);
 		if(book==null)throw new BooklibException("图书不存在");
@@ -73,7 +71,6 @@ public class BookServiceImpl implements BookService {
 	}
 	
 	@Override
->>>>>>> hxy
 	public List<BeanBook> findBooks(String bookName, String author, String booktypeName) throws BooklibException {
 		BeanBookType bookType = null;
 		if(booktypeName!=null) {
